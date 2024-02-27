@@ -1,0 +1,29 @@
+<div class="modal fade" id="editNoteModal" tabindex="-1" aria-labelledby="editnoteLabel" aria-hidden="true">
+		<div class="modal-dialog">
+			<div class="modal-content">
+				<div class="modal-header">
+					<h1 class="modal-title fs-5" id="editnoteLabel">Edit notes</h1>
+					<button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+				</div>
+				<div class="modal-body">
+
+					{{ form_start(editForm) }}
+
+					<div class="input-group mb-3 align-items-center">
+						{{ form_widget(editForm.title) }}
+						{{ form_widget(editForm.description) }}
+
+						<input type="hidden" name="todoid" id="todoid">
+
+						<button type="submit" class="btn btn-primary" id="addNotes">
+							<i class="fa fa-add"></i>
+						</button>
+					</div>
+					{{ form_end(editForm) }}
+				</div>
+				<div class="modal-footer">
+					<button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+				</div>
+			</div>
+		</div>
+	</div>

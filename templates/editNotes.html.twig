@@ -1,0 +1,30 @@
+{% extends 'base.html.twig' %}
+{% block body %}
+<div class="container  w-50">
+	<div class="row m-auto pt-5 mt-5 w-50 bg-primary text-light p-2 rounded-top align-items-center">
+		<h1 class="text-center mb-4">Edit Note</h1>
+		{{ form_start(form) }}
+		<div class="row align-items-center">
+			<div class="col-xl-12 col-md-12 my-1 text-center">
+				{{ form_label(form.title) }}
+			</div>
+			<div class="col-xl-12 col-md-12 my-1 text-center">
+				{{ form_widget(form.title) }}
+			</div>
+		</div>
+		<div class="row align-items-center">
+			<div class="col-xl-12 col-md-12 my-1 text-center">
+				{{ form_label(form.description) }}
+			</div>
+			<div class="col-xl-12 col-md-12 my-1 text-center">
+				{{ form_widget(form.description) }}
+			</div>
+		</div>
+
+		<div class="col-xl-12 mt-3 col-md-12 pb-5 text-center">
+			<button type="submit" class="btn btn-warning">Add Note</button>
+		</div>
+		{{ form_end(form) }}
+	</div>
+</div>
+{% endblock %}

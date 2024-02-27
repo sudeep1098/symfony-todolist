@@ -1,0 +1,29 @@
+<div class="modal fade" id="doneNoteModal" tabindex="-1" aria-labelledby="donenoteLabel" aria-hidden="true">
+		<div class="modal-dialog">
+			<div class="modal-content">
+				<div class="modal-header">
+					<h1 class="modal-title fs-5" id="donenoteLabel">Add Done notes</h1>
+					<button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+				</div>
+				<div class="modal-body">
+
+					{{ form_start(doneForm, {'action': path('add_done_notes'), 'method': 'POST'}) }}
+
+					<div class="input-group mb-3 align-items-center">
+						{{ form_widget(doneForm.title) }}
+						{{ form_widget(doneForm.description) }}
+
+						<input type="hidden" name="todoid" id="todoid">
+
+						<button type="submit" class="btn btn-primary" id="addNotes">
+							<i class="fa fa-add"></i>
+						</button>
+					</div>
+					{{ form_end(doneForm) }}
+				</div>
+				<div class="modal-footer">
+					<button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+				</div>
+			</div>
+		</div>
+	</div>
